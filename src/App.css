@@ -1311,6 +1311,17 @@ p {
    ========================================================= */
 
 @media (max-width: 900px) {
+  /* Evita repintar el fondo fijo y las capas desenfocadas durante el scroll móvil. */
+  body {
+    background-attachment: scroll;
+  }
+
+  .topbar,
+  .stat-card,
+  .empty-state {
+    backdrop-filter: none;
+  }
+
   .topbar {
     padding: 10px 18px;
   }
@@ -1349,6 +1360,16 @@ p {
 
   .countdown-card {
     min-height: 190px;
+  }
+}
+
+@media (hover: none) {
+  .activity-card:hover {
+    transform: none;
+  }
+
+  .activity-card:hover .countdown-card {
+    filter: none;
   }
 }
 
