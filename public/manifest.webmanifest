@@ -2,8 +2,8 @@
   "name": "Memoria Nexus",
   "short_name": "Memoria Nexus",
   "description": "Agenda y recordatorios personales de NexusDigital.",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "orientation": "any",
   "theme_color": "#07152f",
@@ -11,13 +11,13 @@
   "lang": "es-AR",
   "icons": [
     {
-      "src": "/MemoriaNexus_icon_192.png",
+      "src": "memoria-nexus-icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/MemoriaNexus_icon_512.png",
+      "src": "memoria-nexus-icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"

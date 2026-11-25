@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import "./App.css";
 
 const STORAGE_KEY = "memoria-nexus-actividades";
+const BASE_URL = import.meta.env.BASE_URL;
 
 const formularioInicial = {
   titulo: "",
@@ -565,8 +566,8 @@ function App() {
       const registro = await navigator.serviceWorker?.ready;
       const opciones = {
         body: `${actividad.descripcion || ''}${actividad.descripcion ? '\n' : ''}📅 ${formatearFecha(actividad.fecha)}${actividad.hora ? ` · ${actividad.hora}` : ''}`,
-        icon: '/memoria-nexus-icon-192.png',
-        badge: '/memoria-nexus-icon-192.png',
+        icon: `${BASE_URL}memoria-nexus-icon-192.png`,
+        badge: `${BASE_URL}memoria-nexus-icon-192.png`,
         tag: `memoria-nexus-${actividad.id}`,
         requireInteraction: true,
         vibrate: [300, 150, 300, 150, 500],
@@ -805,7 +806,7 @@ function App() {
         <div className="brand-nexus">
 
           <img
-            src="/nexus-digital-logo.png"
+            src={`${BASE_URL}nexus-digital-logo.png`}
             alt="NexusDigital"
             className="nexus-digital-logo"
           />
@@ -830,7 +831,7 @@ function App() {
           <div className="hero-title">
 
             <img
-              src="/memoria-nexus-logo.png"
+              src={`${BASE_URL}memoria-nexus-logo.png`}
               alt="Memoria Nexus"
               className="memoria-nexus-logo"
             />
